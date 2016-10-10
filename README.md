@@ -1,39 +1,36 @@
-# Rendre un DM et corriger des DMs de statistiques proposition
+# Rendre un DM et corriger des DMs de statistiques (proposition)
 
-Le probleme la personne que vous corrigez est en python 2 et vous en python 3, il utiliser la version 0.19 de pandas et vous la version 0.18, comment faire ? Une solution est proposee ici avec les environnements virtuels de python.
+Le problème est le suivant: la personne que vous corrigez est en python 2 et vous en python 3. Il utilise la version 0.19.0 de pandas et vous la version 0.18.0. Comment faire ? Une solution proposée ici est d'utiliser les environnements virtuels de python.
 
 # Prerequis
 
-Il faut avoir installé pip et virtualenv
+Il faut avoir installé pip et virtualenv.
 
 # Environnement virtuel en python
 
-L'objectif est de fournir son environnement python en plus de son ipython notebook lors d'un rendu en statistiques. Afin que le correcteur puisse executer votre rendu facilement.  
+L'objectif est de fournir son environnement python en plus de son ipython notebook lors d'un rendu. Afin que le correcteur puisse exécuter votre rendu facilement.  
 
-Python fournit un systeme d'environnement virtuel (d'ailleurs c'est qu'utilise conda pour fonctionner) pour faire cela:
-**virtualenv**.  
+Python fournit un système d'environnement virtuel pour faire cela: **virtualenv**. D'ailleurs, conda utilise cela pour fonctionner. 
 
-Bien sûr, on pourrait utiliser une machine virtuelle ou un container pour fournir aussi le système d'exploitation (avec **virtualbox** ou **docker**). Mais python est un language multiplateforme (s'exécutant en particulier sous MAC OS, Linux et Windows), ceci n'est pas spécialement utile. Ici il s'agit plus de gérer les différences de versions d'interprèteur python et/ou de bibilothèques tierces: 
+Bien sûr, on pourrait utiliser une machine virtuelle ou un containeur pour fournir aussi le système d'exploitation (avec **virtualbox** ou **docker**). Mais python est un language multi-plateforme (s'exécutant en particulier sous MAC OS, Linux et Windows), ceci n'est pas spécialement utile. Ici il s'agit plus de gérer les différences de versions de l'interpréteur python et/ou de bibliothèques tierces: 
 
-References:
+Références:
 - https://virtualenv.pypa.io/en/stable/
 - https://pip.pypa.io/en/stable/
 - http://sametmax.com/les-environnement-virtuels-python-virtualenv-et-virtualenvwrapper/
 - https://www.docker.com/
 - https://www.virtualbox.org/
 
-
 ### Rendre votre travail
-
 
 Voici ce qui pourrait être rendu:
 - **dmX.ipynb** : votre ipython notebook pour le dm numero X.  
-- **requirements.txt** : la liste des bibliotheques tierces que vous utilisez pour le executer le ipython notebook.
-- **virtualenv-python.sh** : un script qui construit votre environnement virtuel ou vous specifiez votre version de python et votre nom d'environment. 
+- **requirements.txt** : la liste des bibliothèques tierces que vous utilisez pour le exécuter le ipython notebook.
+- **virtualenv-python.sh** : un script qui construit votre environnement virtuel où vous specifiez votre version de python et votre nom d'environment. 
 
-Il faut suivre ces etapes pour le rendu:
+Il faut suivre ces étapes pour le rendu:
 
-1) Construire la liste de vos bibliotheques tierces. 
+1) Construire la liste de vos bibliotheques tierces: 
 
 ~~~
 $ pip freeze > requirements.txt
@@ -64,30 +61,29 @@ echo "*** Launch jupyter notebook" && \
 jupyter notebook
 ~~~
 
-en remplacant `python3.5` avec votre version de python, et `glegoux` par votre nom d'environment (si vous voulez restez anonyme mettez un autre identifiant).
+en remplaçant `python3.5` avec votre version de python, et `glegoux` par votre nom d'environnement (si vous voulez rester anonyme mettez un autre identifiant).
 
-3) Lancer votre script ` virtualenv-python.sh` et essayer de lire et d'executer votre notebook pour verifier que tout fonctionne correctement.
+3) Lancer votre script ` virtualenv-python.sh`, et essayer de lire et d'exécuter votre notebook pour vérifier que tout fonctionne correctement.
 
 ### Corriger le travail de quelqu'un d'autre
 
+Il suffit d'exécuter le script `virtualenv-python.sh`. Si vous faites `Ctrl+C`, cela coupe le serveur jupyter. 
 
-Il suffit d'éxécuter le le script `virtualenv-python.sh`. Si vous faites Ctrl+C cela coupe le serveur jupyter. 
-
-Si vous voulez le relancer, il ne faut pas relancer le script car cela fait aussi l'installation. Il suffit d'abord de se connecter a l'environnement virtual de la personne qui corrige avec:
+Si vous voulez le relancer, il ne faut pas rejouer le script, car cela fait aussi l'installation. Il faut d'abord se connecter 0 l'environnement virtuel de la personne qui corrige avec:
 
 ~~~
 $ source python-env/<id>/bin/activate
 ~~~
 
-ou <id> est l'id de la personne que vous corrigez.
+où <id> est l'id de la personne que vous corrigez.
 
-Puis executer dans cet environnement le serveur jupyter:
+Puis exécuter dans cet environnement le serveur jupyter:
 
 ~~~
 $ jupyter notebook
 ~~~
 
-Pour sortir de l'environnement, il suffit de faire de couper le serveur jupyter avec un Ctrl+C puis de faire:
+Pour sortir de l'environnement, il suffit de couper le serveur jupyter avec un `Ctrl+C` puis de faire:
 
 ~~~
 $ deactivate
@@ -96,6 +92,6 @@ $ deactivate
 ### Remarque
 
 - Il faut exécuter le script `virtualenv-python.sh` dans le dossier courant.
-- Il faut executer la commande `jupyter notebook` dans le dossier courant qui contient le notebook.
-- Vous pouvez utiliser l'example dans le dossier `sample`, avec une simulation de rendu.
-- Pour supprimer tout l'envrironnement genere, il suffit de supprimer le repertoire python-env/.
+- Il faut exécuter la commande `jupyter notebook` dans le dossier courant qui contient le notebook.
+- Vous pouvez utiliser l'exemple dans le dossier `sample`, avec une simulation de rendu.
+- Pour supprimer tout l'envrironnement généré, il suffit de supprimer le repertoire `python-env/`.
