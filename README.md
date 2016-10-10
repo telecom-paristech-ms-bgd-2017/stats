@@ -94,3 +94,4 @@ $ deactivate
 - Il faut exécuter le script `virtualenv-python.sh` dans le dossier courant.
 - Il faut executer la commande `jupyter notebook` dans le dossier courant qui contient le notebook.
 - Vous pouvez utiliser l'example dans le dossier `sample`, avec une simulation de rendu.
+- Pour supprimer tout l'envrironnement genere, il suffit de supprimer le repertoire python-env/.
