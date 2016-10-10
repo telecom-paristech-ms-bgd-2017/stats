@@ -4,7 +4,7 @@ Le probleme la personne que vous corrigez est en python 2 et vous en python 3, i
 
 # Prerequis
 
-Il faut avoir installer pip et virtualenv
+Il faut avoir installé pip et virtualenv
 
 # Environnement virtuel en python
 
