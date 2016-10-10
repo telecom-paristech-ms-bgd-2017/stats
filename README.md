@@ -61,21 +61,21 @@ echo "*** Launch jupyter notebook" && \
 jupyter notebook
 ~~~
 
-en remplaçant `python3.5` avec votre version de python, et `glegoux` par votre nom d'environnement (si vous voulez rester anonyme mettez un autre identifiant).
+en remplaçant `python3.5` avec votre version de python, et `glegoux` par votre nom d'environnement (si vous voulez rester anonyme mettez un autre identifiant \<id\>).
 
-3) Lancer votre script ` virtualenv-python.sh`, et essayer de lire et d'exécuter votre notebook pour vérifier que tout fonctionne correctement.
+3) Lancer votre script `virtualenv-python.sh`, et essayer de lire et d'exécuter votre notebook pour vérifier que tout fonctionne correctement.
 
 ### Corriger le travail de quelqu'un d'autre
 
 Il suffit d'exécuter le script `virtualenv-python.sh`. Si vous faites `Ctrl+C`, cela coupe le serveur jupyter. 
 
-Si vous voulez le relancer, il ne faut pas rejouer le script, car cela fait aussi l'installation. Il faut d'abord se connecter 0 l'environnement virtuel de la personne qui corrige avec:
+Si vous voulez revenir sur votre correction après l'avoir stoppée, il ne faut pas rejouer le script `virtualenv-python.sh`, car cela fait aussi l'installation. Il faut d'abord se connecter à l'environnement virtuel de la personne qui corrige avec:
 
 ~~~
 $ source python-env/<id>/bin/activate
 ~~~
 
-où <id> est l'id de la personne que vous corrigez.
+où \<id\> est l'identifiant de la personne que vous corrigez.
 
 Puis exécuter dans cet environnement le serveur jupyter:
 
