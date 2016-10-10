@@ -59,4 +59,3 @@ en remplacant `python3.5` avec votre version de python, et `glegoux` par votre n
 3) Lancer votre script ` virtualenv-python.sh` et essayer de lire et d'executer votre notebook pour verifier que tout fonctionne correctement.
 
 #### Corriger le travail de quelqu'un d'autre
-<hr>
