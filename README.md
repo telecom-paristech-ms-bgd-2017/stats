@@ -14,10 +14,7 @@ References:
 -  
 -  
 
-<hr>
-
 #### Rendre votre travail
-<hr>
 
 Voici ce qui pourrait être rendu:
 - **dmX.ipynb** : votre ipython notebook pour le dm numero X.  
