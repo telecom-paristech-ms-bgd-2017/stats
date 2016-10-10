@@ -2,6 +2,9 @@
 
 Le probleme la personne que vous corrigez est en python 2 et vous en python 3, il utiliser la version 0.19 de pandas et vous la version 0.18, comment faire ? Une solution est proposee ici avec les environnements virtuels de python.
 
+## Prerequis:
+- Il faut avoir installer pip et virtualenv
+
 # Environnement virtuel en python
 
 L'objectif est de fournir son environnement python en plus de son ipython notebook lors d'un rendu en statistiques. Afin que le correcteur puisse executer votre rendu facilement.  
