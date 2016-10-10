@@ -86,7 +86,7 @@ $ jupyter notebook
 Pour sortir de l'environnement, il suffit de faire de couper le serveur jupyter avec un Ctrl+C puis de faire:
 
 ~~~
-deactivate
+$ deactivate
 ~~~
 
 ### Remarque
