@@ -19,7 +19,7 @@ References:
 - https://www.virtualbox.org/
 
 
-#### Rendre votre travail
+### Rendre votre travail
 
 
 Voici ce qui pourrait être rendu:
@@ -64,7 +64,7 @@ en remplacant `python3.5` avec votre version de python, et `glegoux` par votre n
 
 3) Lancer votre script ` virtualenv-python.sh` et essayer de lire et d'executer votre notebook pour verifier que tout fonctionne correctement.
 
-#### Corriger le travail de quelqu'un d'autre
+### Corriger le travail de quelqu'un d'autre
 
 
 Il suffit d'éxécuter le le script `virtualenv-python.sh`. Si vous faites Ctrl+C cela coupe le serveur jupyter. 
@@ -89,7 +89,8 @@ Pour sortir de l'environnement, il suffit de faire de couper le serveur jupyter 
 deactivate
 ~~~
 
-Remarque: 
+### Remarque
+
 - Il faut exécuter le script `virtualenv-python.sh` dans le dossier courant.
 - Il faut executer la commande `jupyter notebook` dans le dossier courant qui contient le notebook.
 - Vous pouvez utiliser l'example dans le dossier sample, avec une simulation de rendu.
